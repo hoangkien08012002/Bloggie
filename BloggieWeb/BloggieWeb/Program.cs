@@ -1,8 +1,12 @@
+using BloggieWeb.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<BloggieDbContext>(option=>
+option.UseSqlServer(builder.Configuration.GetConnectionString("BloggieDbConnectionString")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
