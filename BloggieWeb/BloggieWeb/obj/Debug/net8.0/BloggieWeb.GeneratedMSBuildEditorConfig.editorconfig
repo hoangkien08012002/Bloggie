@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\FPT\Project\Bloggie\BloggieWeb\BloggieWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/FPT/Project/Bloggie/BloggieWeb/BloggieWeb/Views/AdminTags/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5UYWdzXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/FPT/Project/Bloggie/BloggieWeb/BloggieWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
