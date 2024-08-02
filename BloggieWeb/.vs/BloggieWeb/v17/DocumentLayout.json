@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|d:\\fpt\\project\\bloggie\\bloggieweb\\bloggieweb\\views\\admintags\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|solutionrelative:bloggieweb\\views\\admintags\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|d:\\fpt\\project\\bloggie\\bloggieweb\\bloggieweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|solutionrelative:bloggieweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|d:\\fpt\\project\\bloggie\\bloggieweb\\bloggieweb\\controllers\\admintagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|solutionrelative:bloggieweb\\controllers\\admintagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|d:\\fpt\\project\\bloggie\\bloggieweb\\bloggieweb\\repositories\\tagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|solutionrelative:bloggieweb\\repositories\\tagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|d:\\fpt\\project\\bloggie\\bloggieweb\\bloggieweb\\repositories\\itagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|solutionrelative:bloggieweb\\repositories\\itagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|d:\\fpt\\project\\bloggie\\bloggieweb\\bloggieweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|solutionrelative:bloggieweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|d:\\fpt\\project\\bloggie\\bloggieweb\\bloggieweb\\views\\admintags\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|solutionrelative:bloggieweb\\views\\admintags\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|d:\\fpt\\project\\bloggie\\bloggieweb\\bloggieweb\\views\\admintags\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|solutionrelative:bloggieweb\\views\\admintags\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|d:\\fpt\\project\\bloggie\\bloggieweb\\bloggieweb\\models\\domain\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2ADCD2-49FE-494F-89A0-BA42765375AD}|BloggieWeb\\BloggieWeb.csproj|solutionrelative:bloggieweb\\models\\domain\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,26 +94,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Program.cs",
-              "RelativeDocumentMoniker": "BloggieWeb\\Program.cs",
-              "ToolTip": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Program.cs",
-              "RelativeToolTip": "BloggieWeb\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "ITagRepository.cs",
+              "DocumentMoniker": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Repositories\\ITagRepository.cs",
+              "RelativeDocumentMoniker": "BloggieWeb\\Repositories\\ITagRepository.cs",
+              "ToolTip": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Repositories\\ITagRepository.cs",
+              "RelativeToolTip": "BloggieWeb\\Repositories\\ITagRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T07:15:19.483Z",
+              "WhenOpened": "2024-08-02T16:55:25.37Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
+              "Title": "Tag.cs",
+              "DocumentMoniker": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Models\\Domain\\Tag.cs",
+              "RelativeDocumentMoniker": "BloggieWeb\\Models\\Domain\\Tag.cs",
+              "ToolTip": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Models\\Domain\\Tag.cs",
+              "RelativeToolTip": "BloggieWeb\\Models\\Domain\\Tag.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T08:09:38.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Views\\AdminTags\\List.cshtml",
+              "RelativeDocumentMoniker": "BloggieWeb\\Views\\AdminTags\\List.cshtml",
+              "ToolTip": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Views\\AdminTags\\List.cshtml",
+              "RelativeToolTip": "BloggieWeb\\Views\\AdminTags\\List.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAwwB4AAABtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-02T06:25:52.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Add.cshtml",
               "DocumentMoniker": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Views\\AdminTags\\Add.cshtml",
               "RelativeDocumentMoniker": "BloggieWeb\\Views\\AdminTags\\Add.cshtml",
               "ToolTip": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Views\\AdminTags\\Add.cshtml",
               "RelativeToolTip": "BloggieWeb\\Views\\AdminTags\\Add.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAcAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-01T07:13:14.094Z",
               "EditorCaption": ""
@@ -109,27 +147,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "BloggieWeb\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "BloggieWeb\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAABVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-01T07:10:14.562Z",
+              "Title": "TagRepository.cs",
+              "DocumentMoniker": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Repositories\\TagRepository.cs",
+              "RelativeDocumentMoniker": "BloggieWeb\\Repositories\\TagRepository.cs",
+              "ToolTip": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Repositories\\TagRepository.cs",
+              "RelativeToolTip": "BloggieWeb\\Repositories\\TagRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T17:04:33.795Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AdminTagsController.cs",
               "DocumentMoniker": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Controllers\\AdminTagsController.cs",
               "RelativeDocumentMoniker": "BloggieWeb\\Controllers\\AdminTagsController.cs",
               "ToolTip": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Controllers\\AdminTagsController.cs",
               "RelativeToolTip": "BloggieWeb\\Controllers\\AdminTagsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAiAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACcAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-01T07:02:45.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Program.cs",
+              "RelativeDocumentMoniker": "BloggieWeb\\Program.cs",
+              "ToolTip": "D:\\FPT\\Project\\Bloggie\\BloggieWeb\\BloggieWeb\\Program.cs",
+              "RelativeToolTip": "BloggieWeb\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T07:15:19.483Z",
               "EditorCaption": ""
             }
           ]
