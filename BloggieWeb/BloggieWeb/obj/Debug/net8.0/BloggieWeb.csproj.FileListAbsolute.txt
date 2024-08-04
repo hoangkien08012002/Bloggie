@@ -136,3 +136,5 @@ D:\FPT\Project\Bloggie\BloggieWeb\BloggieWeb\obj\Debug\net8.0\refint\BloggieWeb.
 D:\FPT\Project\Bloggie\BloggieWeb\BloggieWeb\obj\Debug\net8.0\BloggieWeb.pdb
 D:\FPT\Project\Bloggie\BloggieWeb\BloggieWeb\obj\Debug\net8.0\BloggieWeb.genruntimeconfig.cache
 D:\FPT\Project\Bloggie\BloggieWeb\BloggieWeb\obj\Debug\net8.0\ref\BloggieWeb.dll
+D:\FPT\Project\Bloggie\BloggieWeb\BloggieWeb\bin\Debug\net8.0\CloudinaryDotNet.dll
+D:\FPT\Project\Bloggie\BloggieWeb\BloggieWeb\bin\Debug\net8.0\Newtonsoft.Json.dll
