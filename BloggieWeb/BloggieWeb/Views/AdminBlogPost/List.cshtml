@@ -9,8 +9,9 @@
 
 
 <div class="container py-5">
-
-    <table class="table">
+    @if(Model!=null && Model.Any())
+    {
+        <table class="table table-striped">
         <thead>
             <tr>
                 <td>Id</td>
@@ -44,5 +45,10 @@
                 </tr>
             }
         </tbody>
-    </table>
+        </table>
+    }
+    else
+    {
+        <p>No Blog Post Found!!</p>
+    }
 </div>
