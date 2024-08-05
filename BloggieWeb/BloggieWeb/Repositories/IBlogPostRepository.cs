@@ -8,6 +8,8 @@ namespace BloggieWeb.Repositories
 
         Task<BlogPost?> GetAsync(Guid id);
 
+        Task<BlogPost> GetBuUrlHandleAsync(string urlhandle);
+
         Task<BlogPost> AddAsync(BlogPost blogPost);
 
         Task<BlogPost?> UpdateAsync(BlogPost blogPost);

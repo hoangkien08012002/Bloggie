@@ -34,18 +34,26 @@ namespace BloggieWeb.Repositories
 
         public async Task<IEnumerable<BlogPost>> GetAllAsync()
         {
-           return await _dbContext.BlogPosts.Include(x=>x.Tags).ToListAsync();
+            return await _dbContext.BlogPosts.Include(x => x.Tags).ToListAsync();
         }
 
         public async Task<BlogPost?> GetAsync(Guid id)
         {
-          return await _dbContext.BlogPosts.Include(x=>x.Tags).FirstOrDefaultAsync(x=>x.Id == id);
+            return await _dbContext.BlogPosts.Include(x => x.Tags).FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+        public async Task<BlogPost> GetBuUrlHandleAsync(string urlhandle)
+        {
+            var url = await _dbContext.BlogPosts
+                .Include(x => x.Tags)
+                .FirstOrDefaultAsync(x => x.UrlHandle == urlhandle);
+            return url;
         }
 
         public async Task<BlogPost?> UpdateAsync(BlogPost blogPost)
         {
-           var existingBlog =  await _dbContext.BlogPosts.Include(x=>x.Tags).FirstOrDefaultAsync(x => x.Id == blogPost.Id);
-            if(existingBlog != null)
+            var existingBlog = await _dbContext.BlogPosts.Include(x => x.Tags).FirstOrDefaultAsync(x => x.Id == blogPost.Id);
+            if (existingBlog != null)
             {
                 existingBlog.Id = blogPost.Id;
                 existingBlog.Heading = blogPost.Heading;
