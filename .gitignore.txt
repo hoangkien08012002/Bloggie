@@ -1,0 +1,13 @@
+# Các thư mục build
+bin/
+obj/
+
+# Các file tạm thời
+*.log
+*.tmp
+*.swp
+
+# Các file cấu hình Visual Studio
+*.user
+*.suo
+.vs/
