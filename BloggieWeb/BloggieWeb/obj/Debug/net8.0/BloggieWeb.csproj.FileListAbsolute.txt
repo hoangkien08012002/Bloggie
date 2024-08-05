@@ -138,3 +138,4 @@ D:\FPT\Project\Bloggie\BloggieWeb\BloggieWeb\obj\Debug\net8.0\BloggieWeb.genrunt
 D:\FPT\Project\Bloggie\BloggieWeb\BloggieWeb\obj\Debug\net8.0\ref\BloggieWeb.dll
 D:\FPT\Project\Bloggie\BloggieWeb\BloggieWeb\bin\Debug\net8.0\CloudinaryDotNet.dll
 D:\FPT\Project\Bloggie\BloggieWeb\BloggieWeb\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\FPT\Project\Bloggie\BloggieWeb\BloggieWeb\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

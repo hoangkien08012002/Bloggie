@@ -22,6 +22,7 @@ namespace BloggieWeb.Controllers
 
         public async Task<IActionResult> Index()
         {
+            
             var blogPost = await _blogPostRepository.GetAllAsync();
             var tags = await _tagrepository.GetAllAsync();
             var model = new HomeViewModel
