@@ -2,10 +2,12 @@
 using BloggieWeb.Models.Domain;
 using BloggieWeb.Models.ViewModels;
 using BloggieWeb.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 namespace BloggieWeb.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminBlogPostController : Controller
     {
         private readonly ITagRepository _tagRepository;
