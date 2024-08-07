@@ -4,6 +4,7 @@ using BloggieWeb.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BloggieWeb.Migrations
 {
     [DbContext(typeof(BloggieDbContext))]
-    partial class BloggieDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240807061343_Adding like finctionality")]
+    partial class Addinglikefinctionality
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -75,32 +78,6 @@ namespace BloggieWeb.Migrations
                     b.ToTable("BlogPosts");
                 });
 
-            modelBuilder.Entity("BloggieWeb.Models.Domain.BlogPostComment", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("Blogpostid")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("DateAdded")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("Userid")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Blogpostid");
-
-                    b.ToTable("BlogPostComments");
-                });
-
             modelBuilder.Entity("BloggieWeb.Models.Domain.BlogPostLike", b =>
                 {
                     b.Property<Guid>("Id")
@@ -152,15 +129,6 @@ namespace BloggieWeb.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("BloggieWeb.Models.Domain.BlogPostComment", b =>
-                {
-                    b.HasOne("BloggieWeb.Models.Domain.BlogPost", null)
-                        .WithMany("Comments")
-                        .HasForeignKey("Blogpostid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("BloggieWeb.Models.Domain.BlogPostLike", b =>
                 {
                     b.HasOne("BloggieWeb.Models.Domain.BlogPost", null)
@@ -172,8 +140,6 @@ namespace BloggieWeb.Migrations
 
             modelBuilder.Entity("BloggieWeb.Models.Domain.BlogPost", b =>
                 {
-                    b.Navigation("Comments");
-
                     b.Navigation("Likes");
                 });
 #pragma warning restore 612, 618
