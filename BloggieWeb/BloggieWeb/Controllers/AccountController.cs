@@ -25,25 +25,29 @@ namespace BloggieWeb.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel registerViewModel)
         {
-            var identityUser = new IdentityUser
+            if (ModelState.IsValid)
             {
-                UserName = registerViewModel.UserName,
-                Email = registerViewModel.Email,
-
-            };
-            var identityResult = await userManager.CreateAsync(identityUser, registerViewModel.Password);
-            if (identityResult.Succeeded)
-            {
-                // assign this user the "User" role
-                var roleIdentityResult = await userManager.AddToRoleAsync(identityUser, "User");
-                if (roleIdentityResult.Succeeded)
+                var identityUser = new IdentityUser
                 {
-                    // show success notifi
-                    return RedirectToAction("Register");
+                    UserName = registerViewModel.UserName,
+                    Email = registerViewModel.Email,
+
+                };
+                var identityResult = await userManager.CreateAsync(identityUser, registerViewModel.Password);
+                if (identityResult.Succeeded)
+                {
+                    // assign this user the "User" role
+                    var roleIdentityResult = await userManager.AddToRoleAsync(identityUser, "User");
+                    if (roleIdentityResult.Succeeded)
+                    {
+                        // show success notifi
+                        return RedirectToAction("Register");
+                    }
                 }
             }
+
             // showw err
-            return View("Register");
+            return View();
         }
 
         [HttpGet]
@@ -58,12 +62,16 @@ namespace BloggieWeb.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel loginViewModel)
         {
-            var signInResult = await signInManager.PasswordSignInAsync(loginViewModel.UserName,
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+                var signInResult = await signInManager.PasswordSignInAsync(loginViewModel.UserName,
                 loginViewModel.Password, false, false);
 
             if (signInResult != null && signInResult.Succeeded)
             {
-                if(!string.IsNullOrWhiteSpace(loginViewModel.ReturnUrl))
+                if (!string.IsNullOrWhiteSpace(loginViewModel.ReturnUrl))
                 {
                     return Redirect(loginViewModel.ReturnUrl);
                 }
