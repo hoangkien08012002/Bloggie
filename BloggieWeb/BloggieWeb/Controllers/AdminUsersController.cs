@@ -72,5 +72,19 @@ namespace BloggieWeb.Controllers
             }
             return View();
         }
+        [HttpPost]
+        public async Task<IActionResult> Delete(Guid Id)
+        {
+            var user = await userManager.FindByIdAsync(Id.ToString());
+            if(user is not null)
+            {
+                var identityResult =await userManager.DeleteAsync(user);
+                if(identityResult is not null && identityResult.Succeeded)
+                {
+                    return RedirectToAction("List", "AdminUsers");
+                }
+            }
+            return View();
+        }
     }
 }
