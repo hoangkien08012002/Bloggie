@@ -29,7 +29,7 @@ namespace BloggieWeb.Controllers
         public async Task<IActionResult> Add(AddTagRequest addTagRequest)
         {
             validateAddtagRequest(addTagRequest);
-            if(ModelState.IsValid == false)
+            if (ModelState.IsValid == false)
             {
                 return View();
             }
@@ -46,9 +46,34 @@ namespace BloggieWeb.Controllers
 
         [HttpGet]
         [ActionName("List")]
-        public async Task<IActionResult> List()
+        public async Task<IActionResult> List(string? searchQuery,
+            string? sortBy, 
+            string? sortDirection,
+            int pageSize =3, 
+            int pageNumber=1)
         {
-            var tags = await _tagRepository.GetAllAsync();
+            var totalRecords = await _tagRepository.CountAsync();
+            var totalPages = Math.Ceiling((decimal)totalRecords / pageSize);
+
+            if(pageNumber> totalPages)
+            {
+                pageNumber--;
+            }
+            if (pageNumber < 1)
+            {
+                pageNumber++;
+            }
+
+            ViewBag.ToTalPages = totalPages;
+
+            ViewBag.SearchQuery = searchQuery;
+            ViewBag.SortBy = sortBy;
+            ViewBag.SortDirection = sortDirection;
+            ViewBag.PageSize = pageSize;
+            ViewBag.PageNumber = pageNumber;
+            //use dbContext to read tag
+            var tags = await _tagRepository.GetAllAsync(searchQuery, sortBy, sortDirection, pageNumber, pageSize);
+
 
             return View(tags);
         }
@@ -80,7 +105,7 @@ namespace BloggieWeb.Controllers
                 Displayname = editTagRequest.Displayname,
             };
             var updateTag = await _tagRepository.UpdateAsync(tag);
-            if(updateTag != null)
+            if (updateTag != null)
             {
                 //show success notification
             }
@@ -95,7 +120,7 @@ namespace BloggieWeb.Controllers
         public async Task<IActionResult> Delete(EditTagRequest editTagRequest)
         {
             var deleteTag = await _tagRepository.DeleteAsync(editTagRequest.Id);
-            if(deleteTag != null)
+            if (deleteTag != null)
             {
                 //show success notification
             }
@@ -108,11 +133,11 @@ namespace BloggieWeb.Controllers
 
         private void validateAddtagRequest(AddTagRequest request)
         {
-            if(request.Name is not null && request.DisplayName is not null)
+            if (request.Name is not null && request.DisplayName is not null)
             {
-                if(request.Name == request.DisplayName)
+                if (request.Name == request.DisplayName)
                 {
-                    ModelState.AddModelError("DisplayName","Name cannot be the same as Displayname");
+                    ModelState.AddModelError("DisplayName", "Name cannot be the same as Displayname");
                 }
             }
         }

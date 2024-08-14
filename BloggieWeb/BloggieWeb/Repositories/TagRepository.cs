@@ -20,15 +20,43 @@ namespace BloggieWeb.Repositories
             return tag;
         }
 
-        public async Task<IEnumerable<Tag>> GetAllAsync()
+        public async Task<IEnumerable<Tag>> GetAllAsync(string? searchQuery, string? sortBy, string? sortDirection,
+            int pageNumber = 1,
+            int pageSize = 100)
         {
-           return await _context.Tags.ToListAsync();
+            var query = _context.Tags.AsQueryable();
+
+            //filtering
+            if (string.IsNullOrWhiteSpace(searchQuery) == false)
+            {
+                query = query.Where(x => x.Name.Contains(searchQuery) || x.Displayname.Contains(searchQuery));
+            }
+            //sorting 
+            if (string.IsNullOrWhiteSpace(sortBy) == false)
+            {
+                var isDesc = string.Equals(sortDirection, "Desc", StringComparison.OrdinalIgnoreCase);
+                if (string.Equals(sortBy, "Name", StringComparison.OrdinalIgnoreCase))
+                {
+                    query = isDesc ? query.OrderByDescending(x => x.Name) : query.OrderBy(x => x.Name);
+                }
+                if (string.Equals(sortBy, "Displayname", StringComparison.OrdinalIgnoreCase))
+                {
+                    query = isDesc ? query.OrderByDescending(x => x.Displayname) : query.OrderBy(x => x.Displayname);
+                }
+
+            }
+
+            //pagination
+            var skipResults = (pageNumber - 1) * pageSize;
+            query = query.Skip(skipResults).Take(pageSize);
+
+            return await query.ToListAsync();
 
         }
 
-        public  Task<Tag> GetAsync(Guid id)
+        public Task<Tag> GetAsync(Guid id)
         {
-          return  _context.Tags.FirstOrDefaultAsync(x=>x.Id == id);
+            return _context.Tags.FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<Tag?> UpdateAsync(Tag tag)
@@ -47,7 +75,7 @@ namespace BloggieWeb.Repositories
         public async Task<Tag?> DeleteAsync(Guid id)
         {
             var existingtag = await _context.Tags.FindAsync(id);
-           
+
             if (existingtag != null)
             {
                 _context.Tags.Remove(existingtag);
@@ -56,6 +84,11 @@ namespace BloggieWeb.Repositories
                 return existingtag;
             }
             return null;
+        }
+
+        public async Task<int> CountAsync()
+        {
+            return await _context.Tags.CountAsync();
         }
     }
 }
