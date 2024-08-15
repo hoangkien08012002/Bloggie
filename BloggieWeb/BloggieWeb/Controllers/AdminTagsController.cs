@@ -47,15 +47,15 @@ namespace BloggieWeb.Controllers
         [HttpGet]
         [ActionName("List")]
         public async Task<IActionResult> List(string? searchQuery,
-            string? sortBy, 
+            string? sortBy,
             string? sortDirection,
-            int pageSize =3, 
-            int pageNumber=1)
+            int pageSize = 3,
+            int pageNumber = 1)
         {
             var totalRecords = await _tagRepository.CountAsync();
             var totalPages = Math.Ceiling((decimal)totalRecords / pageSize);
 
-            if(pageNumber> totalPages)
+            if (pageNumber > totalPages)
             {
                 pageNumber--;
             }
